@@ -1,5 +1,6 @@
 package com.driveinmoviecinema.Service;
 
+import com.driveinmoviecinema.exception.noSlotsFoundException;
 import com.driveinmoviecinema.models.BookingDetails;
 import com.driveinmoviecinema.models.ParkingSlot;
 import com.driveinmoviecinema.models.avaliableParkingSlots;
@@ -7,12 +8,12 @@ import com.driveinmoviecinema.models.avaliableParkingSlots;
 public interface BookingService {
 	
 	
-	public avaliableParkingSlots parkingSlotAvaliability(ParkingSlot parkingSlot);
+	public avaliableParkingSlots parkingSlotAvaliability(ParkingSlot parkingSlot) throws noSlotsFoundException;
 
-	public BookingDetails BookTicket(BookingDetails bookingDetails);
+	public BookingDetails BookTicket(BookingDetails bookingDetails) throws noSlotsFoundException;
 
-	public BookingDetails showBookingDetails(String id);
+	public BookingDetails showBookingDetails(String id) throws noSlotsFoundException;
 
-	public BookingDetails cancelBooking(String id);
+	public BookingDetails cancelBooking(String id)throws noSlotsFoundException;
 
 }
