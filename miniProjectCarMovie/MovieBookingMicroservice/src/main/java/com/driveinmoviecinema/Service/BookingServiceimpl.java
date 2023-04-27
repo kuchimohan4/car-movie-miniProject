@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.driveinmoviecinema.DAO.BookingServiceDao;
 import com.driveinmoviecinema.models.BookingDetails;
 import com.driveinmoviecinema.models.ParkingSlot;
+import com.driveinmoviecinema.models.avaliableParkingSlots;
 
 @Service
 public class BookingServiceimpl implements BookingService {
@@ -14,7 +15,7 @@ public class BookingServiceimpl implements BookingService {
 	private BookingServiceDao bookingServiceDao;
 	
 	@Override
-	public ParkingSlot parkingSlotAvaliability(ParkingSlot parkingSlot) {
+	public avaliableParkingSlots parkingSlotAvaliability(ParkingSlot parkingSlot) {
 		// TODO Auto-generated method stub
 		return bookingServiceDao.parkingSlotAvaliability(parkingSlot);
 	}

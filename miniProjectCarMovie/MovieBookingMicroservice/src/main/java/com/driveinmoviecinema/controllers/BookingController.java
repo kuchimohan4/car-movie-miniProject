@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.driveinmoviecinema.Service.BookingService;
 import com.driveinmoviecinema.models.BookingDetails;
 import com.driveinmoviecinema.models.ParkingSlot;
+import com.driveinmoviecinema.models.avaliableParkingSlots;
 
 
 
@@ -23,7 +24,7 @@ public class BookingController {
 	private BookingService bookingService;
 	
 	@PostMapping("/ParkingSlots")
-	public ParkingSlot  parkingSlotAvaliability(@RequestBody ParkingSlot parkingSlot) {
+	public avaliableParkingSlots  parkingSlotAvaliability(@RequestBody ParkingSlot parkingSlot) {
 		return bookingService.parkingSlotAvaliability(parkingSlot);
 	}
 	@PostMapping("/BookTicket")

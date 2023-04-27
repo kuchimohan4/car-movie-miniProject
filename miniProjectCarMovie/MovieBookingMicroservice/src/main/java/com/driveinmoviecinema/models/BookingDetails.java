@@ -1,5 +1,7 @@
 package com.driveinmoviecinema.models;
 
+import java.util.UUID;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
@@ -65,13 +67,17 @@ public class BookingDetails {
 	public BookingDetails(String ticketConformationId, String carNumber, String movieTitle, String movieDate,
 			String moviePlayTime, String parkingSlotNumber, String ticketStatus) {
 		super();
-		TicketConformationId = ticketConformationId;
 		this.carNumber = carNumber;
 		this.movieTitle = movieTitle;
 		this.movieDate = movieDate;
 		this.moviePlayTime = moviePlayTime;
 		ParkingSlotNumber = parkingSlotNumber;
 		TicketStatus = ticketStatus;
+	}
+	
+	public void genrateConfmId() {
+		
+		this.TicketConformationId=UUID.randomUUID().toString().split("-",5)[0];
 	}
 	
 	

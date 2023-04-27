@@ -18,8 +18,8 @@ public class ParkingSlot {
 	private int id;
 	private String slot;
 	private String movieTitle;
-	private String Date;
-	private String PlayTime;
+	private String date;
+	private String playTime;
 	private boolean avliable; 
 	
 	public String getMovieTitle() {
@@ -29,16 +29,16 @@ public class ParkingSlot {
 		this.movieTitle = movieTitle;
 	}
 	public String getDate() {
-		return Date;
+		return date;
 	}
 	public void setDate(String date) {
-		Date = date;
+		this.date = date;
 	}
 	public String getPlayTime() {
-		return PlayTime;
+		return playTime;
 	}
 	public void setPlayTime(String playTime) {
-		PlayTime = playTime;
+		this.playTime = playTime;
 	}
 	public ParkingSlot() {
 		super();
@@ -67,8 +67,8 @@ public class ParkingSlot {
 		this.id = id;
 		this.slot = slot;
 		this.movieTitle = movieTitle;
-		Date = date;
-		PlayTime = playTime;
+		this.date = date;
+		this.playTime = playTime;
 		this.avliable = avliable;
 	}
 	
